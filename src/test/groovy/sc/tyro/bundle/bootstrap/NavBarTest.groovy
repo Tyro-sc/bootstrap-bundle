@@ -5,10 +5,8 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import sc.tyro.bundle.TyroWebTestExtension
-import sc.tyro.bundle.html5.input.InputTypePassword
-import sc.tyro.core.component.field.PasswordField
 
-import java.awt.Component
+import java.awt.*
 
 import static sc.tyro.bundle.TyroWebTestExtension.BASE_URL
 import static sc.tyro.core.Tyro.$
