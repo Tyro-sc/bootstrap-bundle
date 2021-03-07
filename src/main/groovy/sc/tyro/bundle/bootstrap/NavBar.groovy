@@ -5,6 +5,10 @@ import sc.tyro.bundle.html5.Nav
 import sc.tyro.core.By
 import sc.tyro.web.CssIdentifier
 
+/**
+ * @author David Avenante
+ * @since 1.0.0
+ */
 @CssIdentifier('nav.navbar')
 class NavBar extends Nav {
     A brand() {
