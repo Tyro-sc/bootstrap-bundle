@@ -12,6 +12,6 @@ import sc.tyro.web.CssIdentifier
 @CssIdentifier('nav.navbar')
 class NavBar extends Nav {
     A brand() {
-        provider.find(By.expression('#' + id() + ' a.navbar-brand'), A)
+        provider.find(A, By.expression('#' + id() + ' a.navbar-brand'))
     }
 }

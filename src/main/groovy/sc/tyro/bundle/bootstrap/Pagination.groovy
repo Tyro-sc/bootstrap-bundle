@@ -13,21 +13,10 @@ import sc.tyro.web.CssIdentifier
  * @since 1.0.0
  */
 @CssIdentifier('ul.pagination')
-class Pagination extends ListView implements SelectedItemSupport {
-
+class Pagination extends Ul implements SelectedItemSupport {
     @Override
     List<PaginationItem> items() {
         provider.findAll(PaginationItem, By.expression('#' + id() + ' li'))
-    }
-
-    @Override
-    Item item(String value) {
-        items().find { it.value() == value }
-    }
-
-    @Override
-    boolean empty() {
-        items().empty
     }
 
     @Override
@@ -35,10 +24,10 @@ class Pagination extends ListView implements SelectedItemSupport {
         return items().find { Boolean.valueOf(provider.eval(it.id(), "it.hasClass('active')")) }
     }
 
-    class  PaginationItem extends Li {
+    class PaginationItem extends Li {
         @Override
         boolean enabled() {
-            !Boolean.valueOf(provider.eval(id(), "it.hasClass('disabled')"))
+            !provider.check(id(), "it.hasClass('disabled')")
         }
     }
 }

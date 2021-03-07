@@ -6,6 +6,10 @@ import sc.tyro.core.support.property.MaximumSupport
 import sc.tyro.core.support.property.ValueSupport
 import sc.tyro.web.CssIdentifier
 
+/**
+ * @author David Avenante
+ * @since 1.0.0
+ */
 @CssIdentifier('div.progress')
 class Progress extends Div implements MaximumSupport, ValueSupport, LabelSupport {
     @Override
